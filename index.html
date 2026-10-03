@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Атлас ППВ — Учёт источников противопожарного водоснабжения</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: opacity 0.3s;
+        }
+        nav a:hover {
+            opacity: 0.8;
+        }
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        .btn {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #c0392b;
+        }
+        .btn-secondary {
+            background: #3498db;
+            margin-left: 1rem;
+        }
+        .btn-secondary:hover {
+            background: #2980b9;
+        }
+        .features {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+        .features h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+        .screenshots {
+            padding: 4rem 0;
+        }
+        .screenshots h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+        }
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .screenshot-card img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .screenshot-card p {
+            text-align: center;
+            margin-top: 1rem;
+            color: #666;
+        }
+        .faq {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+        .faq h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+        }
+        .faq-item {
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .faq-item h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        .disclaimer {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            nav a {
+                margin-left: 1rem;
+                font-size: 0.9rem;
+            }
+            .btn-secondary {
+                margin-left: 0;
+                margin-top: 1rem;
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Атлас ППВ</div>
+            <nav>
+                <a href="#features">Возможности</a>
+                <a href="#screenshots">Скриншоты</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Учёт источников противопожарного водоснабжения за минуты, а не часы</h1>
+            <p>Десктопная программа для специалистов пожарной охраны. Создавайте базу гидрантов, водоемов и башен, экспортируйте в KML для ЭСУ ППВ и maps.me, генерируйте акты и отчёты в Word/Excel одним кликом. Работает без интернета.</p>
+            <a href="#download" class="btn">⬇ Скачать бесплатно</a>
+            <a href="#buy" class="btn btn-secondary">Купить полную версию</a>
+            <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">~15 МБ. Если антивирус ругается, см. инструкцию ниже.</p>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Возможности</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>🗺 Справочный планшет с картой</h3>
+                    <p>Визуализация источников, авторазбивка на сектора, привязка к местности.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📊 Автогенерация отчётов</h3>
+                    <p>Мгновенное создание списков, характеристик, актов о безводных направлениях и сводных ведомостей в форматах Excel и Word.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔄 Полная совместимость</h3>
+                    <p>Импорт и экспорт KML. Готовые данные для загрузки в ЭСУ ППВ и мобильные карты (maps.me, OSMAnd).</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🗄 Структурированная база</h3>
+                    <p>Иерархия Округ → Поселение → Поселок → Источник. Удобный поиск и фильтрация.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="screenshots" class="screenshots">
+        <div class="container">
+            <h2>Как это выглядит</h2>
+            <div class="screenshot-grid">
+                <div class="screenshot-card">
+                    <img src="images/screenshot1.jpg" alt="Главное окно программы">
+                    <p>Главное окно с картой источников</p>
+                </div>
+                <div class="screenshot-card">
+                    <img src="images/screenshot2.jpg" alt="Экспорт в KML">
+                    <p>Экспорт данных в KML</p>
+                </div>
+                <div class="screenshot-card">
+                    <img src="images/screenshot3.jpg" alt="Генерация отчёта">
+                    <p>Автоматическая генерация отчёта</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>Частые вопросы</h2>
+            <div class="faq-item">
+                <h3>В: Программа платная?</h3>
+                <p>О: Базовая версия распространяется бесплатно. Полная версия с расширенными возможностями стоит 500 ₽/мес или 3500 ₽ навсегда.</p>
+            </div>
+            <div class="faq-item">
+                <h3>В: Антивирус удаляет файл при скачивании.</h3>
+                <p>О: Это ложное срабатывание, характерное для программ на Python (PyInstaller). Добавьте программу в исключения. <a href="#antivirus-instruction">Инструкция</a>.</p>
+            </div>
+            <div class="faq-item">
+                <h3>В: Работает ли программа без интернета?</h3>
+                <p>О: Да, все данные хранятся локально на вашем компьютере.</p>
+            </div>
+            <div class="faq-item">
+                <h3>В: Что будет, если я перестану платить за подписку?</h3>
+                <p>О: Программа продолжит работать в режиме просмотра ранее созданных баз, но генерация новых отчетов и экспорт будут недоступны до продления.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <p><strong>Контакты:</strong></p>
+            <p>Telegram-чат для поддержки: <a href="https://t.me/ваш_чат" target="_blank">@ваш_чат</a></p>
+            <p>Email: <a href="mailto:ваш@email.ru">ваш@email.ru</a></p>
+            <div class="disclaimer">
+                <p>Программа предоставляется "как есть" (AS IS). Автор не несет ответственности за возможные неточности в данных. Используйте программу как вспомогательный инструмент, всегда сверяйте данные с первичными источниками.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
